@@ -1,0 +1,49 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <fragment
+        android:id="@+id/fragment_map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <EditText
+        android:id="@+id/startAddress"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="From"
+        android:layout_alignStart="@id/fragment_map"
+        android:background="@color/one"
+        />
+
+    <EditText
+        android:id="@+id/destinationAddress"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/startAddress"
+        android:layout_alignParentStart="true"
+        android:background="@color/one"
+        android:hint="To" />
+
+    <Button
+        android:id="@+id/searchBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:backgroundTint="@color/four"
+        android:layout_alignEnd="@id/fragment_map"
+        />
+
+    <Button
+        android:id="@+id/clearBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:backgroundTint="@color/four"
+        android:layout_below="@id/searchBtn"
+        android:layout_alignEnd="@id/fragment_map"
+        />
+</RelativeLayout>
