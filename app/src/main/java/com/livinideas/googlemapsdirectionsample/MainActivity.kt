@@ -1,10 +1,12 @@
 package com.livinideas.googlemapsdirectionsample
 
+import android.content.Intent
 import android.graphics.Color
 import android.location.Address
 import android.location.Geocoder
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.android.volley.Request
 import com.android.volley.Response
@@ -21,6 +23,8 @@ import com.google.maps.android.PolyUtil
 import kotlinx.android.synthetic.main.activity_main.*
 import org.json.JSONObject
 import java.io.IOException
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+
 
 
 class MainActivity : AppCompatActivity(), OnMapReadyCallback {
@@ -34,6 +38,12 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
 //        val intent = intent
 //        val value = intent.getStringExtra("key1")
         // Initialize Google Maps and its callbacks
+        idFABFeedback.setOnClickListener {
+            Toast.makeText(this,"Please fill the feedback form",Toast.LENGTH_SHORT).show()
+            val myIntent = Intent(this, FeedbackForm::class.java)
+//            myIntent.putExtra("key1", "login")
+            this.startActivity(myIntent)
+        }
         val mapFragment = supportFragmentManager.findFragmentById(R.id.fragment_map) as SupportMapFragment
         mapFragment.getMapAsync(this)
     }

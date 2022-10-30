@@ -1,8 +1,7 @@
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <fragment
         android:id="@+id/fragment_map"
@@ -46,4 +45,23 @@
         android:layout_below="@id/searchBtn"
         android:layout_alignEnd="@id/fragment_map"
         />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/idFABFeedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/app_name"
+        android:padding="4dp"
+        app:fabSize="normal"
+        app:backgroundTint="@color/colorPrimaryDark"
+        android:src="@drawable/ic_baseline_feedback_24"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        />
+<!--        android:src="@drawable/ic_home"-->
+<!--        app:backgroundTint="@color/purple_200"-->
+<!--        app:tint="@color/white" -->
+
+
 </RelativeLayout>
