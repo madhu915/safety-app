@@ -1,4 +1,5 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -7,7 +8,8 @@
         android:id="@+id/fragment_map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        tools:layout="@layout/activity_login" />
 
     <EditText
         android:id="@+id/startAddress"
@@ -26,6 +28,21 @@
         android:layout_alignParentStart="true"
         android:background="@color/one"
         android:hint="To" />
+
+    <TextView
+        android:id="@+id/routeInfo"
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="45dp"
+        android:background="@color/one"
+        android:scrollbars="vertical"
+        android:padding="6dp"
+        android:textSize="15dp"
+        android:textStyle="bold|italic"
+        android:textAlignment="center"
+        android:text="No Route Info Provided"
+        android:visibility="invisible" />
 
     <Button
         android:id="@+id/searchBtn"
@@ -59,7 +76,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         />
-<!--        android:src="@drawable/ic_home"-->
+    <!--        android:src="@drawable/ic_home"-->
 <!--        app:backgroundTint="@color/purple_200"-->
 <!--        app:tint="@color/white" -->
 
